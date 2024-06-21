@@ -1,0 +1,74 @@
+---
+import { Icon } from 'astro-icon/components';
+import {
+	AnnouncementBar,
+	Button,
+	ImageSection,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+	StickyTextImageSection,
+	CtaCardSection,
+} from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
+
+const seo = {
+	title: 'Ropa | Valex Tejidos',
+	description: 'Landing Page #1 | Astro Odyssey Theme',
+};
+---
+
+<Layout {seo}>
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Ropa</h1>
+			<p>Prendas de ropa artesanal 💖.</p>
+		</div>
+
+		<picture slot="image-container">
+			<img
+				src="/assets/images/landing-3/top.jpg"
+				alt="Astro Odyssee"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
+
+	<CustomerQuoteSection
+		quoteText="Cansado de la ropa producida en masa y sin alma? ¡Anímate a descubrir la belleza y exclusividad de las prendas hechas a mano!"
+		customerName="¡Descubre la magia de la ropa hecha a mano!"/>
+
+	<StickyTextImageSection>
+		<div slot="text-container">
+			<h2>¡Descubre la magia de la ropa hecha a mano!</h2>
+			<h3>Nuestros llaveros están hechos con:</h3>
+			<p>
+                - Piezas únicas y especiales: Cada prenda está elaborada con mimo y atención al detalle, convirtiéndola en una obra de arte única e irrepetible. <br> <br>
+                - Diseños originales y exclusivos: Olvídate de la ropa que ves en todas partes. Las prendas hechas a mano te permiten expresar tu estilo único y diferenciarte del resto. <br> <br>
+                - Materiales de alta calidad: Disfruta de la comodidad y suavidad de telas cuidadosamente seleccionadas y trabajadas con técnicas artesanales.
+			</p>
+			<h3>Descubre los beneficios de la ropa hecha a mano:</h3>
+			<p>
+                - Resalta tu estilo único: Las prendas hechas a mano te permiten expresar tu personalidad y diferenciarte de las tendencias masivas. <br> <br>
+                - Prendas duraderas y atemporales: Olvídate de la ropa que se pasa de moda en una temporada. Las prendas hechas a mano están diseñadas para durar y ser usadas durante mucho tiempo. <br> <br>
+                - Una inversión en calidad: Al elegir ropa hecha a mano, inviertes en piezas únicas y de alta calidad que te acompañarán durante años.
+			</p>
+			<h3>Los llaveros tejidos a mano son:</h3>
+			<p>
+				- Duraderos: Soportan el uso diario sin problemas. <br>
+				- Versátiles: Puedes usarlos para tus llaves, bolso o incluso como adorno para el coche. <br>
+				- Unicos: Cada llavero es una pieza única hecha con amor.
+			</p>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/home/ropa.jpg"
+				alt=""
+				loading="lazy"
+			/>
+		</picture>
+	</StickyTextImageSection>
+
+	
+</Layout>

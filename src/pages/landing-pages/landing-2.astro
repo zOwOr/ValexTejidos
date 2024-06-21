@@ -1,0 +1,72 @@
+---
+import { Icon } from 'astro-icon/components';
+import {
+	AnnouncementBar,
+	Button,
+	ImageSection,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+	StickyTextImageSection,
+	CtaCardSection,
+} from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
+
+const seo = {
+	title: 'Amigurumis | Valex Tejidos',
+	description: 'Landing Page #1 | Astro Odyssey Theme',
+};
+---
+
+<Layout {seo}>
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Amigurumis</h1>
+			<p>Diseños de Personajes personalizados 💖.</p>
+		</div>
+
+		<picture slot="image-container">
+			<img
+				src="/assets/images/landing-2/coraline.jpg"
+				alt="Astro Odyssee"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
+
+	<CustomerQuoteSection
+		quoteText="¿Te encantan los peluches adorables y únicos? Entonces te encantarán los amigurumis, ¡los muñecos tejidos a mano que están conquistando corazones en todo el mundo!"
+		customerName="¡Adéntrate en el adorable mundo de los amigurumis!"/>
+
+	<StickyTextImageSection>
+		<div slot="text-container">
+			<h2>¡Adéntrate en el adorable mundo de los amigurumis!</h2>
+			
+			<h3>Hechizos a crochet:</h3>
+			<p>
+				- Un sinfín de personajes: Animalitos, personajes de dibujos animados, figuras fantásticas... ¡Las posibilidades son infinitas! <br><br>
+				- Regalos ideales: Sorprende a tus seres queridos con un regalo original y personalizado. Los amigurumis son perfectos para cumpleaños, Navidad, Día del Niño o cualquier ocasión especial. <br><br>
+				- Para todas las edades: Los amigurumis son adorados por niños y adultos por igual. Son un excelente juguete para los más pequeños y una adorable decoración para el hogar. <br><br>	
+			</p>
+
+			<h3>¿Quieres empezar tu propia colección de amigurumis?</h3>
+			<p>
+				- Conmigo encontrarás una gran variedad de diseños para elegir. <br><br>
+				- También puedo crear amigurumis personalizados a tu gusto.
+			</p>
+		</div>
+		<picture slot="image-container">
+			<img src="/assets/images/landing-2/greni.jpg" alt="" loading="lazy"
+			/>
+		</picture>
+	</StickyTextImageSection>
+	<ImageSection>
+		<picture slot="image-container1">
+			<img src="/assets/images/landing-2/conejo.jpg" alt="" loading="lazy" />
+		</picture>
+		<picture slot="image-container2">
+			<img src="/assets/images/landing-2/gengar.jpg" alt="" loading="lazy" />
+		</picture>
+	</ImageSection>
+</Layout>

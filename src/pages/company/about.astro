@@ -1,0 +1,32 @@
+---
+import { TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import HeroSection from '../../components/sections/heros/HeroSection.astro';
+
+const seo = {
+	title: 'About | Astro Odyssey Theme',
+	description: 'About Page',
+};
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h1>¡Hey!,</h1>
+			<p>
+				intento crecer en este mundo del emprendimiento con mi
+				imaginación y la tuya, puedo crear desde 0 lo que tú imaginación
+				explota, inténtalo, para ti o una persona especial, tu lo haces
+				realidad, yo solo doy un empujón.
+			</p>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/logovalex.jpg"
+				alt="Astro Odyssee"
+				id="home-hero-image"
+			/>
+		</picture>
+	</HeroSection>
+
+</Layout>

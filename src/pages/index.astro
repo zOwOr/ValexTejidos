@@ -1,0 +1,58 @@
+---
+import { Container, FeatureCard } from '@components/odyssey-theme';
+
+import Layout from '../layouts/Page.astro';
+import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
+---
+
+<Layout>
+	<HomeHeroSection />
+	<Container>
+		<section class="feature-card__section">
+			<h2>Categorias</h2>
+
+			<div class="feature-card__grid">
+				<FeatureCard href="/landing-pages/landing-1" title="Llaveros" imgSrc="/assets/images/home/screenshots/llaveros">
+				</FeatureCard>
+				<FeatureCard href="/landing-pages/landing-2" title="Amigurumis" imgSrc="/assets/images/home/screenshots/amigurumi">
+				</FeatureCard>
+				<FeatureCard href="/landing-pages/landing-3" title="Ropa" imgSrc="/assets/images/home/screenshots/ropa">
+				</FeatureCard>
+				<FeatureCard href="/landing-pages/landing-4" title="Peluches" imgSrc="/assets/images/home/screenshots/peluches">
+				</FeatureCard>
+
+				
+			</div>
+		</section>
+	</Container>
+
+	<Container>
+		<section class="feature-card__section">
+			<h2>Información Adicional</h2>
+
+			<div class="feature-card">
+				<FeatureCard href="/company/about" title="Acerca de:" imgSrc="/assets/images/home/screenshots/acerca">
+				</FeatureCard>
+
+			</div>
+		</section>
+	</Container>
+
+	
+</Layout>
+
+<style>
+	.feature-card__section {
+		margin: var(--section-margin) auto;
+	}
+	.feature-card__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--theme-grid-gap);
+	}
+	@media (max-width: 768px) {
+		.feature-card__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

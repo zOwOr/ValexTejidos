@@ -1,0 +1,47 @@
+---
+import Container from '../core/Container.astro';
+
+const {reversed} = Astro.props;
+---
+
+<Container>
+  <section class={`sticky-image__section ${reversed && `sticky-image__section--reversed`}`}>
+
+    <div class="sticky-image__image">
+      <slot name="image-container1"></slot>
+    </div>
+
+    <div class="sticky-image__image">
+      <slot name="image-container2"></slot>
+    </div>
+  </section>
+</Container>
+
+
+  <style>
+  .sticky-image__section {
+    margin: calc(var(--section-margin) * 2) auto;
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    position: relative;
+    gap: 2rem;
+  }
+  .sticky-image__section--reversed {
+    grid-template-columns: 4fr 6fr;
+  }
+  .sticky-image__section--reversed .sticky-image__text {
+    order: 2;
+  }
+  .sticky-image__image :global(:first-child) {
+    position: sticky;
+    top: 0;
+  }
+  .sticky-image__section :global(img) {
+    border-radius: var(--theme-shape-radius);
+  }
+  @media (max-width: 768px) {
+    .sticky-image__section {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

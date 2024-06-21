@@ -1,0 +1,67 @@
+---
+import { Icon } from 'astro-icon/components';
+import {
+	AnnouncementBar,
+	Button,
+	ImageSection,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+	StickyTextImageSection,
+	CtaCardSection,
+} from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
+
+const seo = {
+	title: 'Peluches | Valex Tejidos',
+	description: 'Landing Page #1 | Astro Odyssey Theme',
+};
+---
+
+<Layout {seo}>
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Peluches</h1>
+			<p>Diseños de Personajes personalizados 💖.</p>
+		</div>
+
+		<picture slot="image-container">
+			<img
+				src="/assets/images/landing-4/pato.jpg"
+				alt="Astro Odyssee"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
+
+	<CustomerQuoteSection
+		quoteText="¿Buscas un regalo original y lleno de cariño? Sorprende a tus seres queridos con un peluche hecho a mano. Son el detalle perfecto para cualquier ocasión: cumpleaños, Navidad, Día del Niño o simplemente para demostrarle a alguien que lo aprecias."
+		customerName="¡Sumérgete en el tierno mundo de los peluches hechos a mano!"/>
+
+	<StickyTextImageSection>
+		<div slot="text-container">
+			<h2>¡Sumérgete en el tierno mundo de los peluches hechos a mano!</h2>
+			
+			<h3>Nuestros peluches están hechos con:</h3>
+			<p>
+                - Materiales de alta calidad: Pelos suaves y duraderos que no se desgastan con el tiempo. <br>
+                - Relleno hipoalergénico: Perfecto para niños y personas con alergias. <br>
+                - Diseños únicos y adorables: Animalitos, personajes de cuentos, figuras fantásticas... ¡Tenemos un peluche para cada gusto! <br>
+                - Hechos con amor y dedicación: Cada peluche está elaborado con mimo y cuidado, convirtiéndolo en una pieza especial. <br>
+            </p>
+
+			<h3>Además, puedes personalizar tu peluche:</h3>
+			<p>
+                - Elige tu color favorito. <br>
+                - Pide un diseño especial con el nombre de la persona a la que se lo vas a regalar. <br>
+                - Añade un mensaje o una dedicatoria bordada. <br>
+			</p>
+		</div>
+		<picture slot="image-container">
+			<img src="/assets/images/home/peluches.jpg" alt="" loading="lazy"
+			/>
+		</picture>
+	</StickyTextImageSection>
+
+</Layout>

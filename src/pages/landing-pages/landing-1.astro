@@ -1,0 +1,90 @@
+---
+import { Icon } from 'astro-icon/components';
+import {
+	AnnouncementBar,
+	Button,
+	ImageSection,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+	StickyTextImageSection,
+	CtaCardSection,
+} from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
+
+const seo = {
+	title: 'LLaveros | Valex Tejidos',
+	description: 'Landing Page #1 | Astro Odyssey Theme',
+};
+---
+
+<Layout {seo}>
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Llaveros</h1>
+			<p>Hechos de pequeñas figuritas personalizadas 💖.</p>
+		</div>
+
+		<picture slot="image-container">
+			<img
+				src="/assets/images/landing-1/pulpo.jpg"
+				alt="Astro Odyssee"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
+
+	<CustomerQuoteSection
+		quoteText="¿Buscas un regalo original y especial? Sorprende a tus seres queridos con un llavero tejido a mano. Son el detalle perfecto para cualquier ocasión: cumpleaños, Navidad, Día de la Madre, o simplemente para demostrarle a alguien que lo aprecias."
+		customerName="¡Dale un toque único a tus llaves con llaveros tejidos a mano!"
+	/>
+
+	<StickyTextImageSection>
+		<div slot="text-container">
+			<h2>¡Dale un toque único a tus llaves con llaveros tejidos a mano!</h2>
+			<h3>Nuestros llaveros están hechos con:</h3>
+			<p>
+				- Hilo de alta calidad que no se deshilacha ni se decolora. <br>
+				- Diseños únicos y coloridos que alegrarán tu día. <br>
+				- Mucho amor y dedicación.
+			</p>
+			<h3>Además, puedes personalizar tu llavero:</h3>
+			<p>
+				- Elige tu color favorito. <br>
+				- Pide un diseño especial con tu nombre, iniciales o una frase significativa. <br>
+				- Añade un dije o accesorio para hacerlo aún más único. <br>
+			</p>
+			<h3>Los llaveros tejidos a mano son:</h3>
+			<p>
+				- Duraderos: Soportan el uso diario sin problemas. <br>
+				- Versátiles: Puedes usarlos para tus llaves, bolso o incluso como adorno para el coche. <br>
+				- Unicos: Cada llavero es una pieza única hecha con amor.
+			</p>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/landing-1/mandragora.jpg"
+				alt=""
+				loading="lazy"
+			/>
+		</picture>
+	</StickyTextImageSection>
+	<ImageSection>
+		<picture slot="image-container1">
+			<img
+				src="/assets/images/landing-1/fresa.jpg"
+				alt=""
+				loading="lazy"
+			/>
+		</picture>
+		<picture slot="image-container2">
+			<img
+				src="/assets/images/landing-1/gatos.jpg"
+				alt=""
+				loading="lazy"
+			/>
+		</picture>
+	</ImageSection>
+	
+</Layout>
